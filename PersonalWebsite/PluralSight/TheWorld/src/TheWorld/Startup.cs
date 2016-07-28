@@ -30,12 +30,26 @@ namespace TheWorld
                 app.UseDeveloperExceptionPage();
             }
 
-            // As the request comes in, return "Hello World" as a response 
-            app.Run(async (context) =>
-            {
-                // Returns the string, not an actual webpage regardless of the request
-                await context.Response.WriteAsync("<html><body><h3>Hello World!<h3><body><html>");
-            });
+            //// As the request comes in, return "Hello World" as a response 
+            //app.Run(async (context) =>
+            //{
+            //    // Returns the string, not an actual webpage regardless of the request
+            //    await context.Response.WriteAsync("<html><body><h3>Hello World!<h3><body><html>");
+            //});
+
+
+            // Automatically looks for index.html
+            app.UseDefaultFiles();
+
+            // Opens project.json and add wwwroot files them to the dependencies
+            // Now the static files middleware is there to actually find it
+            app.UseStaticFiles();
+
+
+
+            // The order of the middleware is important.  It has to first figure out what the default file is then serve up the static files.
+            // We define who is handling what and it what order. 
+            
         }
     }
 }
