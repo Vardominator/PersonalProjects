@@ -16,40 +16,41 @@ namespace TheWorld
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-
+            // In ASP.NET core we are required to use dependency injection
+            // The job of this method is to set up the service container that the different parts of the application requires
+            // Essentially registers all MVC services
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         // Method that is called to set up what to do when requests come in. Code that is being written and called everytime a request comes in.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            loggerFactory.AddConsole();
 
-            if (env.IsDevelopment())
+            if (env.IsEnvironment("Development"))
             {
                 app.UseDeveloperExceptionPage();
             }
 
-            //// As the request comes in, return "Hello World" as a response 
-            //app.Run(async (context) =>
-            //{
-            //    // Returns the string, not an actual webpage regardless of the request
-            //    await context.Response.WriteAsync("<html><body><h3>Hello World!<h3><body><html>");
-            //});
+            //app.UseDefaultFiles();
 
+            app.UseDeveloperExceptionPage();
 
-            // Automatically looks for index.html
-            app.UseDefaultFiles();
-
-            // Opens project.json and add wwwroot files them to the dependencies
-            // Now the static files middleware is there to actually find it
             app.UseStaticFiles();
 
 
+            // Enable middleware to start listening to routes that we want
+            app.UseMvc(config =>
+            {
+                config.MapRoute(
+                    name: "Default",
+                    template: "{controller}/{action}/{id?}",
+                    defaults: new { controller = "App", action = "Index" }
+                    );
+            }); 
+            // MVC requires a number of services, interfaces, objects in order to do its job
+            app.UseMvc();
 
-            // The order of the middleware is important.  It has to first figure out what the default file is then serve up the static files.
-            // We define who is handling what and it what order. 
-            
         }
     }
 }

@@ -35,5 +35,15 @@
         }
 
     });
+ 
+    var $mainbar = $("#main");
+    $mainbar.on("mouseenter", function () {
+        $mainbar.toggleClass("trigger-main");
+    });
+
+    $mainbar.on("mouseleave", function () {
+        $mainbar.toggleClass("trigger-main");
+    });
+
 
 })();
