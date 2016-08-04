@@ -14,19 +14,9 @@ namespace PersonalWebsite.Controllers
         }
 
 
-        // Who I am 
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
-
         // Reach me
         public IActionResult ReachMe()
         {
-            ViewData["Message"] = "Your contact page.";
 
             return View();
         }
