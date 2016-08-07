@@ -15,29 +15,23 @@ namespace PersonalWebsite.Controllers
 
 
         // Reach me
-        public IActionResult ReachMe()
-        {
-
-            return View();
-        }
-
-        public IActionResult WhoIAm()
+        public IActionResult Contact()
         {
 
             return View();
         }
         
-        public IActionResult WhatIDo()
+        public IActionResult Projects()
         {
             return View();
         }
 
-        public IActionResult WhatIWrite()
+        public IActionResult Blog()
         {
             return View();
         }
 
-        public IActionResult WhatIveDone()
+        public IActionResult Resume()
         {
             return View();
         }

@@ -1,13 +1,15 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 /* Set widths on the form inputs since otherwise they're 100% wide */
@@ -37,7 +39,34 @@ textarea {
   }
 }
 
-
 .menu{
     font-size:20px;
+    list-style-type:none;
+    overflow: hidden;
+    background-color:black;
 }
+
+.menu li a{
+    display: block;
+    float:left;
+    padding: 16px;
+}
+
+.menu li a:hover{
+    background-color:white;
+}
+
+#sidebar{
+    position:fixed;
+    height: 100%;
+    width:220px;
+    margin:0 0 0 0;
+}
+
+#wrapper{
+    margin: 0 0 0 220px;
+}
+
+.mainphoto{
+}
+

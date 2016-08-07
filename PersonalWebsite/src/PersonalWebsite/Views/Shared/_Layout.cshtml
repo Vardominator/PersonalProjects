@@ -15,22 +15,33 @@
 
 <body>
 
-
-    <div>
-        <img src="~/images/photo.jpg" />
+    <div id="sidebar">
+        <a asp-controller="Home" asp-action="Index">  
+            <img src="~/images/photo.jpg" class="mainphoto"/>
+        </a>
+        <h1>Varderes Barsegyan</h1> 
     </div>
 
-    @RenderBody()
+
+
+    <div id="wrapper">
+        <ul class="menu">
+            <li><a asp-controller="Home" asp-action="Projects">Projects</a></li>
+            <li><a asp-controller="Home" asp-action="Blog">Blog</a></li>
+            <li><a asp-controller="Home" asp-action="Resume">Resume</a></li>
+            <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+        </ul>
+
+        <div>
+            @RenderBody()
+        </div>
+
+    </div>
+
+
+    
 
     @RenderSection("scripts", required: false)
-
-    <ul class="menu">
-        <li><a asp-controller="Home" asp-action="Index">Who I am</a></li>
-        <li><a asp-controller="Home" asp-action="WhatIDo">What I do</a></li>
-        <li><a asp-controller="Home" asp-action="WhatIWrite">What I write</a></li>
-        <li><a asp-controller="Home" asp-action="WhatIveDone">What I've done</a></li>
-        <li><a asp-controller="Home" asp-action="ReachMe">Reach Me</a></li>
-    </ul>
 
 
 </body>

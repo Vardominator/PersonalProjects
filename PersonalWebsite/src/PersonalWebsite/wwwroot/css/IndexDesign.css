@@ -1,0 +1,18 @@
+﻿.socialmedia {
+    padding:16px;
+    list-style-type:none;
+}
+
+.socialmedia li a{
+    font-style:normal;
+    padding:16px;
+    float:left;
+}
+
+.shortbio{
+    text-align:left;
+    margin-right:240px;
+    margin-left:0px;
+    font-style:normal;
+    font-family:Arial;
+}
