@@ -1,17 +1,52 @@
-﻿@{
+﻿@model PersonalWebsite.ViewModel.ContactViewModel
+
+@{
     ViewBag.Title = "Contact";
 }
 
-<h2>You can reach me</h2>
+@section scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+}
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Varderes - @ViewBag.Title</title>
+    <link rel="stylesheet" href="~/css/IndexDesign.css" />
+</head>
 
-<address>
-    <strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<!--post method is used for controller, where support for it is added-->
+<form class="contactform" method="post">
+    <div>
+        <label asp-for="Name"></label>
+    </div>
+    <div>
+        <input asp-for="Name" type="text" required/>
+        <span asp-validation-for="Name"></span>
+    </div>
+
+
+    <div>
+        <label asp-for="Email"></label>
+    </div>
+    <div>
+        <input asp-for="Email" type="email" required/>
+        <span asp-validation-for="Email"></span>
+    </div>
+
+    <div>
+        <label asp-for="Message"></label>
+    </div>
+    <div>
+        <textarea asp-for="Message" required></textarea>
+        <span asp-validation-for="Message"></span>
+    </div>
+    <input type="submit" value="Send" />
+</form>
+
+
+
+
+

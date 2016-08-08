@@ -196,3 +196,6 @@
 "F:\GitHub\PersonalProjects\PersonalWebsite\src\PersonalWebsite\Program.cs"
 "F:\GitHub\PersonalProjects\PersonalWebsite\src\PersonalWebsite\Startup.cs"
 "F:\GitHub\PersonalProjects\PersonalWebsite\src\PersonalWebsite\Controllers\HomeController.cs"
+"F:\GitHub\PersonalProjects\PersonalWebsite\src\PersonalWebsite\Services\DebugMailService.cs"
+"F:\GitHub\PersonalProjects\PersonalWebsite\src\PersonalWebsite\Services\IMailService.cs"
+"F:\GitHub\PersonalProjects\PersonalWebsite\src\PersonalWebsite\ViewModel\ContactViewModel.cs"

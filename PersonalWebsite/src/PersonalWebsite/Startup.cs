@@ -7,11 +7,14 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using PersonalWebsite.Services;
 
 namespace PersonalWebsite
 {
     public class Startup
     {
+
+
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
@@ -35,6 +38,16 @@ namespace PersonalWebsite
         {
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
+
+
+            // Add our own service so that the controller will know what IMailService is
+            //      in this case the implementer is DebugMailService
+            // AddScoped creates an instance for each set of requests
+            services.AddScoped<IMailService, DebugMailService>();
+
+            // AddTransient will add the service when it needs and keep it cached around
+            //services.AddTransient<IMailService, DebugMailService>();
+
 
             services.AddMvc();
         }
