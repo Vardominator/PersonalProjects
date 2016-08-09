@@ -1,25 +1,4 @@
-﻿body {
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
-/* Set widths on the form inputs since otherwise they're 100% wide */
-input,
-select,
-textarea {
-    max-width: 280px;
-}
-
-/* Carousel */
+﻿/* Carousel */
 .carousel-caption p {
     font-size: 20px;
     line-height: 1.4;
@@ -63,10 +42,17 @@ textarea {
     margin:0 0 0 0;
 }
 
+#sidebar.hide-sidebar{
+    left:-220px;
+}
+
 #wrapper{
     margin: 0 0 0 220px;
 }
 
-.mainphoto{
+#wrapper.hide-sidebar{
+    margin-left: 0;
 }
 
+.mainphoto{
+}

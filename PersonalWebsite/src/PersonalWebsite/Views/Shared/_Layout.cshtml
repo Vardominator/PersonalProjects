@@ -8,7 +8,7 @@
 
     <title>Varderes - @ViewBag.Title</title>
 
-
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="~/css/site.css"/>
 
 
@@ -16,12 +16,46 @@
 
 <body>
 
+    <button id="sidebarToggle" value="Hide" class="btn btn-success">Toggle Menu</button>
+
     <div id="sidebar">
-        <a asp-controller="Home" asp-action="Index">  
-            <img src="~/images/photo.jpg" class="mainphoto"/>
+        <a asp-controller="Home" asp-action="Index">
+            <img src="~/images/photo.jpg" class="mainphoto" />
         </a>
-        <h1>Varderes Barsegyan</h1> 
+        <h1>Varderes Barsegyan</h1>
+
+        <div>
+
+            <ul class="socialmedia" id="socialmedia">
+                <li id="test">
+                    <a href="https://github.com/Vardominator">
+                        <img src="~/images/github.png" />
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.linkedin.com/in/barsegyanvarderes">
+                        <img src="~/images/linkedinlogo.png" />
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://twitter.com/Varderes">
+                        <img src="~/images/twitterlogo.png" />
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.facebook.com/vardo.barsegyan">
+                        <img src="~/images/facebooklogo.png" />
+                    </a>
+                </li>
+            </ul>
+
+        </div>
     </div>
+
+
 
 
 
@@ -37,7 +71,15 @@
             @RenderBody()
         </div>
 
+        <div id="footer">
+            <p class="text-primary">&copy; 2016 Varderes Ltd.</p>
+        </div>
+
     </div>
+
+    <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/js/site.js"></script>
 
     @RenderSection("scripts", required: false)
 
