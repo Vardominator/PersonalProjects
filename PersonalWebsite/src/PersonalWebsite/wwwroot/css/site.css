@@ -62,9 +62,25 @@
 
 .nav {
     margin: 0;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .text-center{
     margin-bottom:25px;
+}
+
+#sidebarToggle{
+    margin: 7px 0px 5px -4px;
+    background-color: dodgerblue;
+}
+
+#menuitems{
+    margin: 2px 0 0 0;
+}
+
+#socialmediaitems {
+}
+
+#navbar{
+    
 }
