@@ -1,18 +1,20 @@
 ﻿.socialmedia {
-    padding:16px;
+    padding:10px;
     list-style-type:none;
 }
 
 .socialmedia li a{
     font-style:normal;
-    padding:16px;
+    padding:10px;
     float:left;
 }
 
-.shortbio{
-    text-align:left;
-    margin-right:240px;
-    margin-left:0px;
+#shortbio{
     font-style:normal;
-    font-family:Arial;
+    font-size: 20px;
+}
+
+.currentstatus{
+    outline: 4px solid blue;
+    outline-offset: -10px;
 }

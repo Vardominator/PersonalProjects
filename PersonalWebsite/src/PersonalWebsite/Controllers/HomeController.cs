@@ -31,7 +31,6 @@ namespace PersonalWebsite.Controllers
         // Reach me
         public IActionResult Contact()
         {
-
             return View();
         }
 

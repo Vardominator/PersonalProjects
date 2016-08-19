@@ -18,34 +18,38 @@
 </head>
 
 <!--post method is used for controller, where support for it is added-->
-<form class="contactform" method="post">
-    <div>
-        <label asp-for="Name"></label>
-    </div>
-    <div>
-        <input asp-for="Name" type="text" required/>
-        <span asp-validation-for="Name"></span>
-    </div>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <form class="contactform" method="post">
+            <div>
+                <label asp-for="Name"></label>
+            </div>
+            <div>
+                <input asp-for="Name" type="text" required />
+                <span asp-validation-for="Name"></span>
+            </div>
 
 
-    <div>
-        <label asp-for="Email"></label>
-    </div>
-    <div>
-        <input asp-for="Email" type="email" required/>
-        <span asp-validation-for="Email"></span>
-    </div>
+            <div>
+                <label asp-for="Email"></label>
+            </div>
+            <div>
+                <input asp-for="Email" type="email" required />
+                <span asp-validation-for="Email"></span>
+            </div>
 
-    <div>
-        <label asp-for="Message"></label>
+            <div>
+                <label asp-for="Message"></label>
+            </div>
+            <div>
+                <textarea asp-for="Message" required></textarea>
+                <span asp-validation-for="Message"></span>
+            </div>
+            <input type="submit" value="Send" />
+        </form>
     </div>
-    <div>
-        <textarea asp-for="Message" required></textarea>
-        <span asp-validation-for="Message"></span>
-    </div>
-    <input type="submit" value="Send" />
-</form>
-
+</div>
 
 
 

@@ -8,78 +8,108 @@
 
     <title>Varderes - @ViewBag.Title</title>
 
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="~/css/site.css"/>
-
-
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/bootswatch/yeti/bootstrap.min.css"/>
+    <link href="~/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    
 </head>
 
 <body>
 
-    <button id="sidebarToggle" value="Hide" class="btn btn-success">Toggle Menu</button>
+    <div id="sidebar" class="bg-info">
 
-    <div id="sidebar">
         <a asp-controller="Home" asp-action="Index">
-            <img src="~/images/photo.jpg" class="mainphoto" />
+            <img src="~/images/photo.jpg" class="center-block" />
         </a>
-        <h1>Varderes Barsegyan</h1>
+        <h1 class="text-center"><b>Varderes Barsegyan</b></h1>
 
-        <div>
 
-            <ul class="socialmedia" id="socialmedia">
-                <li id="test">
-                    <a href="https://github.com/Vardominator">
-                        <img src="~/images/github.png" />
-                    </a>
-                </li>
+        <a class="twitter-timeline" data-width="240" data-height="500" data-theme="light" href="https://twitter.com/Varderes">Tweets by Varderes</a>
+        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-                <li>
-                    <a href="https://www.linkedin.com/in/barsegyanvarderes">
-                        <img src="~/images/linkedinlogo.png" />
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://twitter.com/Varderes">
-                        <img src="~/images/twitterlogo.png" />
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://www.facebook.com/vardo.barsegyan">
-                        <img src="~/images/facebooklogo.png" />
-                    </a>
-                </li>
-            </ul>
-
-        </div>
     </div>
-
-
-
 
 
     <div id="wrapper">
-        <ul class="menu">
-            <li><a asp-controller="Home" asp-action="Projects">Projects</a></li>
-            <li><a asp-controller="Home" asp-action="Blog">Blog</a></li>
-            <li><a asp-controller="Home" asp-action="Resume">Resume</a></li>
-            <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
-        </ul>
 
-        <div>
-            @RenderBody()
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav navbar-left">
+                    <li>
+                        <button id="sidebarToggle" value="Hide" class="btn btn-primary btn-sm">
+                            <i class="fa fa-angle-left"></i>
+                        </button>
+                    </li>
+                    <li><a asp-controller="Home" asp-action="Projects">Projects</a></li>
+                    <li><a asp-controller="Home" asp-action="Blog">Blog</a></li>
+                    <li><a asp-controller="Home" asp-action="Resume">Resume</a></li>
+                    <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+                </ul>
+
+
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li id="test">
+                        <a href="https://github.com/Vardominator">
+                            <img src="~/images/github.png" />
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.linkedin.com/in/barsegyanvarderes">
+                            <img src="~/images/linkedinlogo.png" />
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://twitter.com/Varderes">
+                            <img src="~/images/twitterlogo.png" />
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.facebook.com/vardo.barsegyan">
+                            <img src="~/images/facebooklogo.png" />
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href=@("https://medium.com/@Varderes")>
+                            <img src="~/images/mediumlogo.png" />
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="main" class="container-fluid">
+
+            <div>
+                @RenderBody()
+            </div>
+
         </div>
 
-        <div id="footer">
-            <p class="text-primary">&copy; 2016 Varderes Ltd.</p>
+        <div id="footer" class="container-fluid">
+            <div class="navbar navbar-inverse navbar-fixed-bottom">
+                <h4 class="text-center text-info">test footer</h4>
+            </div>
         </div>
+
+
+
 
     </div>
+
 
     <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="~/js/site.js"></script>
+
+    <script src="~/js/facebook.js"></script>
 
     @RenderSection("scripts", required: false)
 
