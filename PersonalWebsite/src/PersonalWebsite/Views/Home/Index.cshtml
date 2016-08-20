@@ -18,28 +18,97 @@
 </head>
 
 
+<div id="everything" class="grid">
 
-<div class="grid">
-    <div class="row">
-        <div class="">
-            <h3 class="text-center" id="shortbio">
-                I am an aspiring software developer and data scientist focused on healthcare informatics, specifically innovating healthcare technology using artificial intelligence.
+
+        <div id="introduction" class="row">
+            <h3 id="introtext" class="text-capitalize text-center">
+                VARDERES
             </h3>
+            <h3 id="introtext" class="text-capitalize text-center">
+                BARSEGYAN
+            </h3>
+            <h5 id="introtextacademia" class="text-capitalize text-center">
+                <a id="academiclinks" href="http://www.csulb.edu/">CSU LONG BEACH</a> ◇ <a id="academiclinks" href="http://web.csulb.edu/colleges/coe/cecs/">COMP SCI</a> & <a id="academiclinks" href="http://web.csulb.edu/web/depts/math/">STATS</a>
+            </h5>s
+
+            <div class="row">
+                <ul id="socialmediamenu" class="socialmedia nav text-center">
+
+                    <li id="socialmediaitems">
+                        <a href="https://github.com/Vardominator">
+                            <img src="~/images/github.png" />
+                        </a>
+                    </li>
+
+                    <li id="socialmediaitems">
+                        <a href="https://www.linkedin.com/in/barsegyanvarderes">
+                            <img src="~/images/linkedinlogo.png" />
+                        </a>
+                    </li>
+
+                    <li id="socialmediaitems">
+                        <a href="https://twitter.com/Varderes">
+                            <img src="~/images/twitterlogo.png" />
+                        </a>
+                    </li>
+
+                    <li id="socialmediaitems">
+                        <a href="https://www.facebook.com/vardo.barsegyan">
+                            <img src="~/images/facebooklogo.png" />
+                        </a>
+                    </li>
+
+                    <li id="socialmediaitems">
+                        <a href=@("https://medium.com/@Varderes")>
+                            <img src="~/images/mediumlogo.png" />
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div id="mainmenu" class="row">
+                <ul id="menuitems" class="text-center">
+
+                    <!--
+            <li>
+                <button id="sidebarToggle" value="Hide" class="btn btn-primary btn-sm">
+                    <i class="fa fa-angle-left"></i>
+                </button>
+            </li>
+            -->
+                    <li id="menutext"><a href="#aboutme">About</a></li>
+                    <li id="menutext"><a asp-controller="Home" asp-action="Projects">Projects</a></li>
+                    <li id="menutext"><a href=@("https://medium.com/@Varderes")>Blog</a></li>
+                    <li id="menutext"><a asp-controller="Home" asp-action="Resume">Résumé</a></li>
+                    <li id="menutext"><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+
+                </ul>
+            </div>
+
         </div>
+
+
+
+
+
+    <div id="aboutme" class="row">
+        <h2 id="aboutsection" class="text-center">About</h2>
+        <img id="mainphoto" src="~/images/photo.jpg" class="center-block" />
+        <h4 id="greetingtext" class="text-center">
+            Hello. Thank you for visiting.  I am a graduate student in computer science and statistics. My focus is in healthcare informatics, particularly using artificial intellgience to better understand our health.  <i>This website is currently just a landing page, but more will be coming soon. Stay tuned!</i>
+        </h4>
     </div>
-    <div class="row currentstatus" id="currentstatus">
-        <div class="col-md-6">
-            <h3>Current pursuits</h3>
-            <ul>
-                <li>
-                    <h4 class="text-left">Pursuing a double master's in computer science and statistics at Cal State Long Beach</h4>
-                </li>
-                <li>
-                    <h4>Graduate research in health care analytics with Dr. Bo Fu</h4>
-                </li>
-            </ul>
-        </div>
+
+
+    <div class="twitterfeed row text-center">
+        <a class="twitter-timeline" data-width="320" data-height="500" data-theme="light" href="https://twitter.com/Varderes">Tweets by Varderes</a>
+        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
     </div>
+
 
 </div>
 

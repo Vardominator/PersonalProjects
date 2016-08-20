@@ -1,20 +1,105 @@
-﻿.socialmedia {
-    padding:10px;
-    list-style-type:none;
+﻿@font-face {
+	font-family: Facile Sans;
+	src: url('../fonts/Facile Sans.otf') format('opentype'), url('../fonts/Facile Sans.ttf') format('truetype');
+}
+
+#introduction{
+    background-color: #E1F5C4;
+    vertical-align: middle;
+    height: 100vh;
+    padding-top: 30px;
+}
+
+#introtext{
+    font-family: 'Facile Sans';
+}
+
+#introtextacademia{
+    font-family: 'Facile Sans';
+    padding-top: 15px;
+}
+
+#academiclinks{
+    text-decoration:none;   
+    color: #547a82;
+}
+
+#academiclinks:hover{
+    color: gray;
+}
+
+.socialmedia {
+    text-align:center;
+    list-style:none;
+    float: none;
+    display: table;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.socialmedia li{
+    display: inline;
 }
 
 .socialmedia li a{
     font-style:normal;
-    padding:10px;
     float:left;
 }
 
-#shortbio{
-    font-style:normal;
-    font-size: 20px;
+#socialmediamenu{
+    background-color: #E1F5C4;
 }
 
-.currentstatus{
-    outline: 2px solid black;
-    outline-offset: -10px;
+#mainmenu{
+    background-color: #A2D4AB;
+}
+
+#menuitems{
+    text-align:center;
+    list-style:none;
+    float: none;
+    display: table;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+
+#menuitems li{
+    padding: 5px;
+}
+
+#menuitems li a{
+    font-size: 24px;
+    font-family: 'Facile Sans';
+    color: white;
+}
+
+#menuitems li a:hover{
+    text-decoration: none;
+    color: gray;
+}
+
+#aboutsection{
+    font-family: 'Facile Sans';
+    padding-bottom: 15px;
+}
+
+#aboutme{
+    padding: 15px;
+    background-color: #83EACA;
+}
+
+#mainphoto{
+    padding: 0 0 25px 0;
+}
+
+#greetingtext{
+    color: white;
+    font-family: 'Facile Sans';
+    font-size: 24px;
+}
+
+.twitterfeed{
+    text-align: center;
+    background-color: #547a82;
 }

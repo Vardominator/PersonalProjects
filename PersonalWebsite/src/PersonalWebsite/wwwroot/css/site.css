@@ -12,27 +12,10 @@
 
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
-  /* Hide captions */
-  .carousel-caption {
-    display: none
-  }
-}
-
-.menu{
-    font-size:20px;
-    list-style-type:none;
-    overflow: hidden;
-    background-color:black;
-}
-
-.menu li a{
-    display: block;
-    float:left;
-    padding: 0px;
-}
-
-.menu li a:hover{
-    background-color:white;
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
 }
 
 #sidebar{
@@ -45,7 +28,6 @@
 }
 
 #sidebar.hide-sidebar{
-    left: -240px;
     transition: left ease .8s;
 }
 
@@ -70,7 +52,6 @@
 }
 
 #sidebarToggle{
-    margin: 7px 0px 5px -4px;
     background-color: dodgerblue;
 }
 
