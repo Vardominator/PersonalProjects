@@ -1,4 +1,9 @@
-﻿function copyTextToClipboard(text) {
+﻿$("#copiedText")
+    .ready(function () {
+        $("#copiedText").hide();
+    });
+
+function copyTextToClipboard(text) {
     if (document.execCommand("copy")) {
         var tmpEl = document.createElement("div");
         tmpEl.innerHTML = text;
@@ -16,5 +21,10 @@
 
         document.body.removeChild(tmpEl);
         window.getSelection().removeAllRanges();
+        $("#copiedText")
+            .fadeIn("fast",
+                function() {
+                    $("#copiedText").fadeOut(4000);
+                });
     }
 }
