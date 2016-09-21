@@ -4,7 +4,6 @@
 
 @section scripts{
     <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
-
     <script type="text/javascript" src="~/js/index.js"></script>
 }
 
@@ -14,13 +13,16 @@
 
     <title>Varderes - @ViewBag.Title</title>
 
+    <script type="text/javascript" src="~/js/utils.js"></script>
     <link rel="stylesheet" href="~/css/IndexDesign.css" />
+    <link rel="stylesheet" href="~/css/Modal.css" />
 </head>
 
 
 <div id="everything" class="grid">
 
 
+<<<<<<< HEAD
     <div id="introduction" class="row">
         <h3 id="introtext" class="text-capitalize text-center">
             VARDERES
@@ -66,6 +68,82 @@
                 </li>
 
             </ul>
+=======
+        <div id="introduction" class="row">
+            <h3 id="introtext" class="text-capitalize text-center">
+                VARDERES
+            </h3>
+            <h3 id="introtext" class="text-capitalize text-center">
+                BARSEGYAN
+            </h3>
+            <h5 id="introtextacademia" class="text-capitalize text-center">
+                <a id="academiclinks" href="http://www.csulb.edu/">CSU LONG BEACH</a> ◇ <a id="academiclinks" href="http://web.csulb.edu/colleges/coe/cecs/">COMP SCI</a> & <a id="academiclinks" href="http://web.csulb.edu/web/depts/math/">STATS</a>
+            </h5>s
+
+            <div class="row">
+                <ul id="socialmediamenu" class="socialmedia nav text-center">
+
+                    <li id="socialmediaitems">
+                        <a href="https://github.com/Vardominator">
+                            <img src="~/images/github.png" />
+                        </a>
+                    </li>
+
+                    <li id="socialmediaitems">
+                        <a href="https://www.linkedin.com/in/barsegyanvarderes">
+                            <img src="~/images/linkedinlogo.png" />
+                        </a>
+                    </li>
+
+                    <li id="socialmediaitems">
+                        <a href="https://twitter.com/Varderes">
+                            <img src="~/images/twitterlogo.png" />
+                        </a>
+                    </li>
+
+                    <li id="socialmediaitems">
+                        <a href="https://www.facebook.com/vardo.barsegyan">
+                            <img src="~/images/facebooklogo.png" />
+                        </a>
+                    </li>
+
+                    <li id="socialmediaitems">
+                        <a href=@("https://medium.com/@Varderes")>
+                            <img src="~/images/mediumlogo.png" />
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div id="mainmenu" class="row">
+                <ul id="menuitems" class="text-center">
+
+                    <!--
+                    <li>
+                        <button id="sidebarToggle" value="Hide" class="btn btn-primary btn-sm">
+                            <i class="fa fa-angle-left"></i>
+                        </button>
+                    </li>
+                    -->
+                    <li id="menutext"><a href="#bioModal">About</a></li>
+                    <li id="menutext"><a asp-controller="Home" asp-action="Projects">Projects</a></li>
+                    <li id="menutext"><a href=@("https://medium.com/@Varderes")>Blog</a></li>
+                    <li id="menutext"><a href="~/assets/Resume.txt" download="VarderesResume.txt" type="text/plain">Résumé</a></li> @*asp-controller="Home" asp-action="Resume"*@
+                    <li id="menutext"><a href="javascript:copyTextToClipboard('varderes@gmail.com')" >Contact</a></li> @* asp-controller="Home" asp-action="Contact"*@
+
+                </ul>
+            </div>
+            <div id="bioModal" class="modalDialog">
+                <div>
+                    <a href="#close" title="Close" class="close">X</a>
+                    <h2>Biography</h2>
+                    <p>This is a sample modal box that can be created using the powers of CSS3.</p>
+                    <p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
+                </div>
+            </div>
+>>>>>>> d5dba7c8241b0811f9a2c5e8570b7ed8dc945b09
 
         </div>
 
