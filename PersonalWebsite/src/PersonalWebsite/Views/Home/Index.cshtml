@@ -4,7 +4,6 @@
 
 @section scripts{
     <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
-
     <script type="text/javascript" src="~/js/index.js"></script>
 }
 
@@ -14,7 +13,9 @@
 
     <title>Varderes - @ViewBag.Title</title>
 
+    <script type="text/javascript" src="~/js/utils.js"></script>
     <link rel="stylesheet" href="~/css/IndexDesign.css" />
+    <link rel="stylesheet" href="~/css/Modal.css" />
 </head>
 
 
@@ -73,19 +74,27 @@
                 <ul id="menuitems" class="text-center">
 
                     <!--
-            <li>
-                <button id="sidebarToggle" value="Hide" class="btn btn-primary btn-sm">
-                    <i class="fa fa-angle-left"></i>
-                </button>
-            </li>
-            -->
-                    <li id="menutext"><a href="#aboutme">About</a></li>
+                    <li>
+                        <button id="sidebarToggle" value="Hide" class="btn btn-primary btn-sm">
+                            <i class="fa fa-angle-left"></i>
+                        </button>
+                    </li>
+                    -->
+                    <li id="menutext"><a href="#bioModal">About</a></li>
                     <li id="menutext"><a asp-controller="Home" asp-action="Projects">Projects</a></li>
                     <li id="menutext"><a href=@("https://medium.com/@Varderes")>Blog</a></li>
-                    <li id="menutext"><a asp-controller="Home" asp-action="Resume">Résumé</a></li>
-                    <li id="menutext"><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li id="menutext"><a href="~/assets/Resume.txt" download="VarderesResume.txt" type="text/plain">Résumé</a></li> @*asp-controller="Home" asp-action="Resume"*@
+                    <li id="menutext"><a href="javascript:copyTextToClipboard('varderes@gmail.com')" >Contact</a></li> @* asp-controller="Home" asp-action="Contact"*@
 
                 </ul>
+            </div>
+            <div id="bioModal" class="modalDialog">
+                <div>
+                    <a href="#close" title="Close" class="close">X</a>
+                    <h2>Biography</h2>
+                    <p>This is a sample modal box that can be created using the powers of CSS3.</p>
+                    <p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
+                </div>
             </div>
 
         </div>
