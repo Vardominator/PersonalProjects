@@ -1,4 +1,10 @@
-﻿$("#copiedText")
+﻿document.addEventListener('keyup', function (e) {
+    if (e.keyCode == 27) {
+        location.hash = '';
+    }
+});
+
+$("#copiedText")
     .ready(function () {
         $("#copiedText").hide();
     });

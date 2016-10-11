@@ -20,114 +20,125 @@
 </head>
 
 
-<div id="everything" class="grid">
-    <div id="introduction" class="row">
-        <h3 id="introtext" class="text-capitalize text-center">VARDERES</h3>
-        <h3 id="introtext" class="text-capitalize text-center">BARSEGYAN</h3>
-
-        <h5 id="introtextacademia" class="text-capitalize text-center">
-            <a id="academiclinks" href="http://www.csulb.edu/">CSU LONG BEACH</a> ◇ <a id="academiclinks" href="http://web.csulb.edu/colleges/coe/cecs/">COMP SCI</a> & <a id="academiclinks" href="http://web.csulb.edu/web/depts/math/">STATS</a>
-        </h5>s
+<div id="everything" class="container-fluid">
+    <div id="introduction">
+        <div class="row">
+            <div class="col-xs-12">
+                <h3 id="introtext" class="text-capitalize text-center">VARDERES</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h3 id="introtext" class="text-capitalize text-center">BARSEGYAN</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h5 id="introtextacademia" class="text-capitalize text-center">
+                    <a id="academiclinks" href="http://www.csulb.edu/">CSU LONG BEACH</a> ◇ <a id="academiclinks" href="http://web.csulb.edu/colleges/coe/cecs/">COMP SCI</a> & <a id="academiclinks" href="http://web.csulb.edu/web/depts/math/">STATS</a>
+                </h5>
+            </div>
+        </div>
 
         <div class="row">
-            <ul id="socialmediamenu" class="socialmedia nav text-center">
+            <div class="col-xs-12">
+                <ul id="socialmediamenu" class="socialmedia nav text-center">
 
-                <li id="socialmediaitems">
-                    <a href="https://github.com/Vardominator">
-                        <img src="~/images/github.png" />
-                    </a>
-                </li>
-
-                <li id="socialmediaitems">
-                    <a href="https://www.linkedin.com/in/barsegyanvarderes">
-                        <img src="~/images/linkedinlogo.png" />
-                    </a>
-                </li>
-
-                <li id="socialmediaitems">
-                    <a href="#twitterModal">
-                        <img src="~/images/twitterlogo.png" />
-                    </a>
-                </li>
-
-                <li id="socialmediaitems">
-                    <a href="https://www.facebook.com/vardo.barsegyan">
-                        <img src="~/images/facebooklogo.png" />
-                    </a>
-                </li>
-
-                <li id="socialmediaitems">
-                    <a href=@("https://medium.com/@Varderes")>
-                        <img src="~/images/mediumlogo.png" />
-                    </a>
-                </li>
-
-            </ul>
-        </div>
-
-        <div id="mainmenu" class="row">
-            <div class="col-xs-4 col-xs-offset-4 col-md-2 col-md-offset-5">
-                <ul id="menuitems" class="text-center">
-
-                    <!--
-                    <li>
-                        <button id="sidebarToggle" value="Hide" class="btn btn-primary btn-sm">
-                            <i class="fa fa-angle-left"></i>
-                        </button>
+                    <li id="socialmediaitems">
+                        <a target="_blank" href="https://github.com/Vardominator">
+                            <img src="~/images/github.png" />
+                        </a>
                     </li>
-                    -->
-                    <li id="menutext"><a href="#bioModal">About</a></li>
-                    <li id="menutext"><a href="#projectsModal">Projects</a></li> @* asp-controller="Home" asp-action="Projects"*@
-                    <li id="menutext"><a href=@("https://medium.com/@Varderes")>Blog</a></li>
-                    <li id="menutext"><a href="~/assets/Resume.txt" download="VarderesResume.txt" type="text/plain">Résumé</a></li> @*asp-controller="Home" asp-action="Resume"*@
-                    <li id="menutext"><a href="javascript:copyTextToClipboard('varderes@gmail.com')">Contact</a></li> @* asp-controller="Home" asp-action="Contact"*@
+
+                    <li id="socialmediaitems">
+                        <a target="_blank" href="https://www.linkedin.com/in/barsegyanvarderes">
+                            <img src="~/images/linkedinlogo.png" />
+                        </a>
+                    </li>
+
+                    <li id="socialmediaitems">
+                        <a href="#twitterModal">
+                            <img src="~/images/twitterlogo.png" />
+                        </a>
+                    </li>
+
+                    <li id="socialmediaitems">
+                        <a target="_blank" href="https://www.facebook.com/vardo.barsegyan">
+                            <img src="~/images/facebooklogo.png" />
+                        </a>
+                    </li>
+
+                    <li id="socialmediaitems">
+                        <a target="_blank" href=@("https://medium.com/@Varderes")>
+                            <img src="~/images/mediumlogo.png" />
+                        </a>
+                    </li>
 
                 </ul>
             </div>
-            <div class="col-xs-3 col-md-1 copiedTextArea">
-                <ul id="menuitems" class="text-center">
-                    <li id="menutext"><a style="visibility: hidden">r</a></li>
-                    <li id="menutext"><a style="visibility: hidden">r</a></li>
-                    <li id="menutext"><a style="visibility: hidden">r</a></li>
-                    <li id="menutext"><a style="visibility: hidden">r</a></li>
-                    <span id="copiedText">Email Copied</span>
-                </ul>
-            </div>
         </div>
-        <div id="bioModal" class="modalDialog">
-            <div>
-                <a href="#close" title="Close" class="close">X</a>
-                <div id="aboutme" class="row">
-                    <h2 id="aboutsection" class="text-center">About</h2>
-                    <img id="mainphoto" src="~/images/photo.jpg" class="center-block" />
-                    <h4 id="greetingtext" class="text-center">
-                        Hello. Thank you for visiting.  I am a graduate student in computer science and statistics. My focus is in healthcare informatics, particularly using artificial intellgience to better understand our health.  <i>This website is currently just a landing page, but more will be coming soon. Stay tuned!</i>
-                    </h4>
+        <div id="mainmenu" class="menuitems">
+            <div class="row">
+                <div class="col-xs-6 col-xs-offset-3 col-sm-2 col-sm-offset-5">
+                    <a href="#bioModal">About</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-xs-offset-3 col-sm-2 col-sm-offset-5">
+                    <a href="#projectsModal">Projects</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-xs-offset-3 col-sm-2 col-sm-offset-5">
+                    <a target="_blank" href=@("https://medium.com/@Varderes")>Blog</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-xs-offset-3 col-sm-2 col-sm-offset-5">
+                    <a href="~/assets/Resume.txt" download="VarderesResume.txt" type="text/plain">Résumé</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-xs-offset-3 col-sm-2 col-sm-offset-5">
+                    <a href="javascript:copyTextToClipboard('varderes@gmail.com')">Contact</a>
+                </div>
+                <div class="col-xs-2">
+                    <span id="copiedText">Email Copied</span>
                 </div>
             </div>
         </div>
-
     </div>
-
-    <div id="projectsModal" class="modalDialog">
+    <div id="bioModal" class="modalDialog">
         <div>
             <a href="#close" title="Close" class="close">X</a>
-            <div id="projects" class="row">
-                <h2 id="projectssection" class="text-center">Projects</h2>
-            </div>
-        </div>
-    </div>
-    <div id="twitterModal" class="modalDialog">
-        <div>
-            <a href="#close" title="Close" class="close">X</a>
-            <div class="twitterfeed row text-center">
-                <a class="twitter-timeline" data-width="320" data-height="500" data-theme="light" href="https://twitter.com/Varderes">Tweets by Varderes</a>
-                <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <div id="aboutme" class="row">
+                <h2 id="aboutsection" class="text-center modalData">About</h2>
+                <img id="mainphoto" src="~/images/photo.jpg" class="center-block" />
+                <h4 id="greetingtext" class="text-center">
+                    Hello. Thank you for visiting. I am a graduate student in computer science and statistics. My focus is in healthcare informatics, particularly using artificial intellgience to better understand our health. <i>This website is currently just a landing page, but more will be coming soon. Stay tuned!</i>
+                </h4>
             </div>
         </div>
     </div>
 
+</div>
 
+<div id="projectsModal" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+        <div id="projects" class="row modalData">
+            <h2 id="projectssection" class="text-center">Projects</h2>
+        </div>
+    </div>
+</div>
+<div id="twitterModal" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+        <div class="twitterfeed row text-center modalData">
+            <a class="twitter-timeline" data-theme="light" href="https://twitter.com/Varderes">Tweets by Varderes</a>
+            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+    </div>
 </div>
 
 
